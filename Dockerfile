@@ -1,10 +1,9 @@
 FROM circleci/python:3.6.5
 
-# Install node and git-lfs
+# Install node
 RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 
-RUN sudo apt-get update && sudo apt-get install -y nodejs git-lfs
+RUN sudo apt-get update && sudo apt-get install -y nodejs
 
 # Install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
